@@ -191,7 +191,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ril.function.dataonly=1 \
     ro.radio.noril=1 \
-    ro.disable.ethernet=0 \
+    ro.disable.ethernet=1 \
     touchscreen.reverse=false
 
 

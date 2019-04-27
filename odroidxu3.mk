@@ -185,7 +185,7 @@ PRODUCT_COPY_FILES += \
 modeswitch_files := $(shell ls $(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d)
 PRODUCT_COPY_FILES += \
     $(foreach file, $(modeswitch_files), \
-    $(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d/$(file):system/etc/usb_modeswitch.d/$(file))
+    "$(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d/$(file)":"system/etc/usb_modeswitch.d/$(file))"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ril.function.dataonly=1 \

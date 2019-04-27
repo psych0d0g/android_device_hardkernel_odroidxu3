@@ -2,10 +2,10 @@
 /dev/ion                  0666   system     system
 /dev/ump                  0666   system     graphics
 /dev/exynos-mem           0660   system     graphics
-/dev/video6               0660   media      media
-/dev/video7               0660   media      media
-/dev/video8               0660   media      media
-/dev/video9               0660   media      media
+/dev/video6               0666   media      media
+/dev/video7               0666   media      media
+/dev/video8               0666   media      media
+/dev/video9               0666   media      media
 /dev/video0               0666   system     camera
 /dev/video1               0666   system     camera
 /dev/video2               0666   system     camera
@@ -82,6 +82,7 @@
 # USB 3g Dongle
 /dev/ttyUSB*              0666   radio      radio
 /dev/ttyACM*              0666   radio      radio
+/dev/ttyGPS*              0666   radio      radio
 
 # USB Acessory
 /dev/usb/lp*              0660   system     usb
@@ -91,3 +92,5 @@
  
 # bluetooth device
 #/dev/bus/usb/001/006      0660    bluetooth bluetooth
+
+/dev/gpiomem               0666    system system

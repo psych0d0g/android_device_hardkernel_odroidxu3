@@ -32,7 +32,7 @@
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+    <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
 
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
@@ -73,7 +73,7 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>"wlan\\d"</item>
+        <item>"wlan0"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -84,7 +84,7 @@
     </string-array>
 
     <!-- Regex of wired ethernet ifaces -->
-    <string translatable="false" name="config_ethernet_iface_regex">eth0</string>
+    <string translatable="false" name="config_ethernet_iface_regex">eth\\d</string>
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
@@ -164,5 +164,9 @@
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
+
+    <!-- Number of times to try again with the shorter interval, before backing
+         off until the normal polling interval. A value < 0 indicates infinite. -->
+    <integer name="config_ntpRetry">-1</integer>
 
 </resources>

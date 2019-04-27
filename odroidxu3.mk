@@ -69,6 +69,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
+    usb_modeswitch \
     setup_fs \
     su
 
@@ -126,8 +127,8 @@ PRODUCT_PACKAGES += \
     memtrack.exynos5
 
 # Lights
-#PRODUCT_PACKAGES += \
-#    lights.odroidxu3
+PRODUCT_PACKAGES += \
+    lights.odroidxu3
 
 # Media profile
 PRODUCT_COPY_FILES += \

@@ -182,8 +182,10 @@ PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/usb3g/bin/usb_modeswitch.sh:system/bin/usb_modeswitch.sh \
     $(LOCAL_PATH)/usb3g/lib/libril-rk29-dataonly.so:system/lib/libril-rk29-dataonly.so
 
+modeswitch_files := $(shell ls $(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d/,/system/etc/usb_modeswitch.d)
+    $(foreach file, $(modeswitch_files), \
+    $(LOCAL_PATH)/usb3g/etc/usb_modeswitch.d/$(file):system/etc/usb_modeswitch.d/$(file))
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ril.function.dataonly=1 \

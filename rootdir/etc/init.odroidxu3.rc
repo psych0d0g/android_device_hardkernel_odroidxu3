@@ -304,7 +304,7 @@ service gps_cfg /system/bin/sh /system/etc/init.gps.sh
     disabled
     oneshot
 
-service usb_modeswitch /system/bin/bash /system/bin/usb_modeswitch.sh
+service usb_modeswitch /system/xbin/bash /system/bin/usb_modeswitch.sh
     class main
     user root
     disabled

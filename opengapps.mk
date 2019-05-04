@@ -15,7 +15,7 @@
 #
 
 # OpenGApps
-GAPPS_VARIANT := nano
+GAPPS_VARIANT := pico
 GAPPS_EXCLUDED_PACKAGES := SetupWizard
 
 # OpenGApps Workarounds
